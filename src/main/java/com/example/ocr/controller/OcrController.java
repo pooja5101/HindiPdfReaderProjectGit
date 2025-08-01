@@ -16,6 +16,11 @@ public class OcrController {
     @Autowired
     private OcrService ocrService;
 
+    @GetMapping("/test")
+    public String testGet() {
+    	return "Hare Krishna";
+    }
+    
     @PostMapping("/extract-text")
     public String extractText(@RequestParam("file") MultipartFile file) throws IOException {
         // Save the uploaded file temporarily

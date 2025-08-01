@@ -33,7 +33,7 @@ public class OcrService {
 
     public String extractTextFromImage(BufferedImage image) {
         ITesseract tesseract = new Tesseract();
-        tesseract.setDatapath("/usr/share/tesseract-ocr/4.00/tessdata"); // Path to tessdata
+        tesseract.setDatapath("C:/Program Files/Tesseract-OCR/tessdata"); // Path to tessdata
         tesseract.setLanguage("hin"); // Hindi language
         tesseract.setPageSegMode(ITessAPI.TessPageSegMode.PSM_AUTO); // Auto-detect layout
 
