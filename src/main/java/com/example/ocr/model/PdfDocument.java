@@ -1,4 +1,5 @@
-import javax.persistence.*;
+package com.example.ocr.model;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "pdf_documents")
@@ -12,9 +13,6 @@ public class PdfDocument {
 
     @Lob
     private byte[] content;
-    
-    @Column(name = "oid")
-    private Long oid; // PostgreSQL large object OID
 
     // Constructors, getters, and setters
     public PdfDocument() {
