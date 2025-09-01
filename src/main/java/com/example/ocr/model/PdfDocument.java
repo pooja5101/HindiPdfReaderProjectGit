@@ -13,14 +13,17 @@ public class PdfDocument {
 
     @Lob
     private byte[] content;
-
+    
+    @Column(name = "oid")
+    private Long oid; // PostgreSQL large object OID
+    
     // Constructors, getters, and setters
     public PdfDocument() {
     }
 
-    public PdfDocument(String fileName, byte[] content) {
+    public PdfDocument(String fileName, Long oid) {
         this.fileName = fileName;
-        this.content = content;
+        this.oid = oid;
     }
 
     // Getters and setters
@@ -40,6 +43,13 @@ public class PdfDocument {
         this.fileName = fileName;
     }
 
+    public Long getOid() {
+        return oid;
+    }
+
+    public void setOid(Long oid) {
+        this.oid = oid;
+    }
     public byte[] getContent() {
         return content;
     }
