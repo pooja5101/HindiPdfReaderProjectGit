@@ -2,7 +2,7 @@ package com.example.ocr.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "pdf_documents")
+@Table(name = "pdfdocument")
 public class PdfDocument {
 
     @Id

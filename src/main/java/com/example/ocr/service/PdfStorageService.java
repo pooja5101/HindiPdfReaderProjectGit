@@ -64,9 +64,9 @@ public class PdfStorageService {
                 obj.write(file.getBytes());
             }
             
-            PdfDocument pdfDocument = new PdfDocument(fileName, null);
+            PdfDocument pdfDocument = new PdfDocument(fileName, oid);
             pdfDocument.setOid(oid);
-            
+            pdfDocument.setContent(file.getBytes());
             PdfDocument savedDoc = pdfDocumentRepository.save(pdfDocument);
             conn.commit();
             return savedDoc;
